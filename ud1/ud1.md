@@ -1,6 +1,6 @@
 # 🖥️ Análisis de Comandos de Procesos en Linux
 
-Este documento explica varios comandos utilizados para monitorear procesos en un sistema Linux, basándose en las capturas de pantalla proporcionadas. Las imágenes están enlazadas desde el directorio `img/`.
+Este documento explica varios comandos utilizados para monitorear procesos en un sistema Linux, basándose en las capturas de pantalla proporcionadas. 
 
 ---
 
