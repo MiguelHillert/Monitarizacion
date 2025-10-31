@@ -1,62 +1,83 @@
-## Análisis de Comandos de Procesos en Linux
+# 🖥️ Análisis de Comandos de Procesos en Linux
 
-Este documento explica varios comandos utilizados para monitorear procesos en un sistema Linux, basándose en las capturas de pantalla proporcionadas.
-
-## 1. Comando: htop
-
-`htop` es un visor de procesos interactivo y avanzado. Ofrece una vista en tiempo real, mucho más visual y fácil de usar que el `top` tradicional. Muestra el uso de CPU por núcleo, el consumo de memoria y swap, la carga media y una lista de procesos que se puede ordenar y filtrar fácilmente.
-
-![Salida de htop](htop_6.png)
+Este documento explica varios comandos utilizados para monitorear procesos en un sistema Linux, basándose en las capturas de pantalla proporcionadas. Las imágenes están enlazadas desde el directorio `ud1/img/`.
 
 ---
 
-## 2. Comando: ps au
+## 📜 Comandos `ps` (Process Status)
 
-El comando `ps au` muestra los procesos de **todos los usuarios** (`a`) en un formato **orientado al usuario** (`u`). Este formato incluye columnas útiles como `USER`, `PID`, `%CPU`, `%MEM`, estado (`STAT`) y el comando completo.
+El comando `ps` (Process Status) se usa para tomar una "foto" o instantánea de los procesos en ejecución en un momento dado. Tiene muchas opciones para filtrar y formatear la salida.
 
-![Salida de ps au](ps_1.png)
+### `ps au`
 
----
+> `ps au`
 
-## 3. Comando: ps aux
+Este comando muestra los procesos de **todos los usuarios** (`a`) en un formato **orientado al usuario** (`u`). Este formato es muy útil ya que incluye columnas como `USER`, `PID`, `%CPU`, `%MEM`, `TTY` (la terminal asociada) y el `COMMAND` completo.
 
-El comando `ps aux` es muy similar a `ps au`. La opción `x` (estilo BSD) se asegura de incluir también los procesos que **no están asociados a ninguna terminal** (como los demonios o servicios del sistema). Es una de las formas más comunes de obtener una instantánea completa de *todos* los procesos en ejecución.
+![Salida de ps au](ud1/img/ps_1.png)
 
-![Salida de ps aux](psaux_2.png)
+### `ps aux`
 
----
+> `ps aux`
 
-## 4. Comando: ps -u alumno
+Es muy similar a `ps au`, pero añade la opción `x` (estilo BSD). Esta opción es crucial ya que incluye también los procesos que **no están asociados a ninguna terminal** (como los demonios o servicios del sistema). Es una de las formas más comunes de ver *todo* lo que se está ejecutando.
 
-Este comando filtra la lista de procesos para mostrar únicamente aquellos que pertenecen al usuario especificado, en este caso, "alumno". Es útil para ver qué está ejecutando un usuario en particular.
+![Salida de ps aux](ud1/img/psaux_2.png)
 
-![Salida de ps -u alumno](ps-u_3.png)
+### `ps -u [usuario]`
 
----
+> `ps -u alumno`
 
-## 5. Comando: ps -eo ... | head ...
+Esta es una forma sencilla de filtrar la lista de procesos para ver únicamente aquellos que pertenecen a un usuario específico, en este caso, "alumno".
 
-Este es un uso avanzado de `ps` para obtener información muy específica.
-* `ps -eo user,pid,comm,%cpu`: Muestra todos los procesos (`e`) con un formato de salida personalizado (`-o`), seleccionando solo las columnas de usuario, PID, nombre del comando y %CPU.
-* `--sort=-%cpu`: Ordena la salida por la columna %CPU en orden descendente (el `-` indica de mayor a menor).
-* `| head -n 6`: Envía el resultado al comando `head`, que muestra solo las primeras 6 líneas (la cabecera más los 5 procesos que más CPU consumen).
+![Salida de ps -u alumno](ud1/img/ps-u_3.png)
 
-![Salida de ps con formato y orden personalizado](comando_informacion_selectiva_7.png)
+### `ps` con formato y orden personalizado
 
----
+> `ps -eo user,pid,comm,%cpu --sort=-%cpu | head -n 6`
 
-## 6. Comando: top (Modo Interactivo)
+Este es un uso avanzado y muy potente de `ps`:
+* `ps -eo ...`: Muestra todos los procesos (`e`) con un **formato de salida personalizado** (`-o`). Aquí pedimos `user`, `pid`, `comm` (nombre del comando) y `%cpu`.
+* `--sort=-%cpu`: **Ordena** la salida por la columna %CPU en orden descendente (el `-` indica de mayor a menor).
+* `| head -n 6`: Envía el resultado al comando `head`, que **filtra** y muestra solo las primeras 6 líneas (la cabecera y los 5 procesos que más CPU consumen).
 
-Esta es la vista estándar del comando `top` en su modo interactivo. Proporciona un resumen dinámico y en tiempo real del estado del sistema (carga, tareas, memoria) y una lista de los procesos que más recursos consumen, la cual se actualiza automáticamente.
-
-![Salida de top interactivo](top_4.png)
+![Salida de ps con formato y orden personalizado](ud1/img/comando_informacion_selectiva_7.png)
 
 ---
 
-## 7. Comando: top -b -n 3 > top.info (Modo Batch)
+## 📊 Comando `top` (Table of Processes)
 
-Esta imagen muestra el resultado de ejecutar `top` en "modo batch" o no interactivo (`-b`), lo que permite que su salida sea redirigida.
-* `top -b -n 3 > top.info`: Ejecuta `top`, toma 3 "fotos" o iteraciones (`-n 3`) y guarda toda esa salida en un archivo llamado `top.info`.
-* `cat top.info`: (Comando ejecutado para ver el archivo) Muestra el contenido del archivo `top.info` que se acaba de crear.
+A diferencia de `ps`, `top` es una herramienta que proporciona una **vista dinámica y en tiempo real** del estado del sistema y los procesos. Se actualiza automáticamente.
 
-![Salida de top en modo batch guardado en un archivo](top_5.png)
+### `top` (Modo Interactivo)
+
+> `top`
+
+Esta es la vista estándar de `top`. Muestra un resumen del sistema (carga, tareas, memoria) y, debajo, una lista de los procesos que más recursos consumen (por defecto, CPU).
+
+![Salida de top interactivo](ud1/img/top_4.png)
+
+### `top` (Modo Batch)
+
+> `top -b -n 3 > top.info`
+> `cat top.info`
+
+`top` también se puede ejecutar en **"modo batch"** (`-b`), que es no-interactivo y permite redirigir su salida a un archivo.
+* `-n 3`: Indica que tome 3 "fotos" o iteraciones y luego termine.
+* `> top.info`: Guarda esa salida en el archivo `top.info`.
+* `cat top.info`: (El segundo comando en la imagen) Simplemente muestra el contenido del archivo que se acaba de crear.
+
+![Salida de top en modo batch guardado en un archivo](ud1/img/top_5.png)
+
+---
+
+## ✨ Comando `htop` (Visor Interactivo)
+
+> `htop`
+
+`htop` es una alternativa moderna y muy popular a `top`. Ofrece una experiencia mucho más visual e interactiva:
+* Muestra gráficos de uso de **CPU por núcleo**, Memoria y Swap.
+* Permite desplazarse vertical y horizontalmente por la lista de procesos.
+* Facilita la gestión de procesos (como matar o cambiar la prioridad) usando teclas de función.
+
+![Salida de htop](ud1/img/htop_6.png)
