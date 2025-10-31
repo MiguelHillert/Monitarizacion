@@ -1,4 +1,4 @@
-# [Volver al inicio](../README.md)
+
 
 # 🖥️ Análisis de Comandos de Procesos en Linux
 
@@ -83,3 +83,7 @@ Esta es la vista estándar de `top`. Muestra un resumen del sistema (carga, tare
 * Facilita la gestión de procesos (como matar o cambiar la prioridad) usando teclas de función.
 
 ![Salida de htop](img/htop_6.png)
+
+
+
+# [Volver al inicio](../README.md)
