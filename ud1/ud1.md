@@ -1,6 +1,6 @@
 # 🖥️ Análisis de Comandos de Procesos en Linux
 
-Este documento explica varios comandos utilizados para monitorear procesos en un sistema Linux, basándose en las capturas de pantalla proporcionadas. Las imágenes están enlazadas desde el directorio `ud1/img/`.
+Este documento explica varios comandos utilizados para monitorear procesos en un sistema Linux, basándose en las capturas de pantalla proporcionadas. Las imágenes están enlazadas desde el directorio `img/`.
 
 ---
 
@@ -14,7 +14,7 @@ El comando `ps` (Process Status) se usa para tomar una "foto" o instantánea de 
 
 Este comando muestra los procesos de **todos los usuarios** (`a`) en un formato **orientado al usuario** (`u`). Este formato es muy útil ya que incluye columnas como `USER`, `PID`, `%CPU`, `%MEM`, `TTY` (la terminal asociada) y el `COMMAND` completo.
 
-![Salida de ps au](ud1/img/ps_1.png)
+![Salida de ps au](img/ps_1.png)
 
 ### `ps aux`
 
@@ -22,7 +22,7 @@ Este comando muestra los procesos de **todos los usuarios** (`a`) en un formato 
 
 Es muy similar a `ps au`, pero añade la opción `x` (estilo BSD). Esta opción es crucial ya que incluye también los procesos que **no están asociados a ninguna terminal** (como los demonios o servicios del sistema). Es una de las formas más comunes de ver *todo* lo que se está ejecutando.
 
-![Salida de ps aux](ud1/img/psaux_2.png)
+![Salida de ps aux](img/psaux_2.png)
 
 ### `ps -u [usuario]`
 
@@ -30,7 +30,7 @@ Es muy similar a `ps au`, pero añade la opción `x` (estilo BSD). Esta opción 
 
 Esta es una forma sencilla de filtrar la lista de procesos para ver únicamente aquellos que pertenecen a un usuario específico, en este caso, "alumno".
 
-![Salida de ps -u alumno](ud1/img/ps-u_3.png)
+![Salida de ps -u alumno](img/ps-u_3.png)
 
 ### `ps` con formato y orden personalizado
 
@@ -41,7 +41,7 @@ Este es un uso avanzado y muy potente de `ps`:
 * `--sort=-%cpu`: **Ordena** la salida por la columna %CPU en orden descendente (el `-` indica de mayor a menor).
 * `| head -n 6`: Envía el resultado al comando `head`, que **filtra** y muestra solo las primeras 6 líneas (la cabecera y los 5 procesos que más CPU consumen).
 
-![Salida de ps con formato y orden personalizado](ud1/img/comando_informacion_selectiva_7.png)
+![Salida de ps con formato y orden personalizado](img/comando_informacion_selectiva_7.png)
 
 ---
 
@@ -55,7 +55,7 @@ A diferencia de `ps`, `top` es una herramienta que proporciona una **vista diná
 
 Esta es la vista estándar de `top`. Muestra un resumen del sistema (carga, tareas, memoria) y, debajo, una lista de los procesos que más recursos consumen (por defecto, CPU).
 
-![Salida de top interactivo](ud1/img/top_4.png)
+![Salida de top interactivo](img/top_4.png)
 
 ### `top` (Modo Batch)
 
@@ -67,7 +67,7 @@ Esta es la vista estándar de `top`. Muestra un resumen del sistema (carga, tare
 * `> top.info`: Guarda esa salida en el archivo `top.info`.
 * `cat top.info`: (El segundo comando en la imagen) Simplemente muestra el contenido del archivo que se acaba de crear.
 
-![Salida de top en modo batch guardado en un archivo](ud1/img/top_5.png)
+![Salida de top en modo batch guardado en un archivo](img/top_5.png)
 
 ---
 
@@ -80,4 +80,4 @@ Esta es la vista estándar de `top`. Muestra un resumen del sistema (carga, tare
 * Permite desplazarse vertical y horizontalmente por la lista de procesos.
 * Facilita la gestión de procesos (como matar o cambiar la prioridad) usando teclas de función.
 
-![Salida de htop](ud1/img/htop_6.png)
+![Salida de htop](img/htop_6.png)
