@@ -1,4 +1,4 @@
-# Análisis de Comandos de Procesos en Linux
+## Análisis de Comandos de Procesos en Linux
 
 Este documento explica varios comandos utilizados para monitorear procesos en un sistema Linux, basándose en las capturas de pantalla proporcionadas.
 
