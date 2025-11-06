@@ -40,7 +40,7 @@ Este es un "Ping Scan". Es una forma rápida de descubrir qué hosts están "viv
 
 En lugar de escanear los 65,535 puertos posibles, este comando escanea solo los `N` puertos más comunes. Es una forma mucho más rápida de obtener una visión general de los servicios principales que ejecuta un host.
 
-![Salida de nmap --top-ports](img/ud4.nmap--top-port...4.png)
+![Salida de nmap --top-ports](img/ud4.nmap--top-ports100-sVIP4.png)
 
 ---
 
