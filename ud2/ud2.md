@@ -70,6 +70,6 @@ La opción `-x` proporciona estadísticas extendidas, que son mucho más útiles
 * `await`: El tiempo promedio (en milisegundos) que las solicitudes de I/O esperan.
 * `%util`: Porcentaje de tiempo que el dispositivo estuvo ocupado. Un valor cercano al 100% indica un cuello de botella en el disco.
 
-![Salida de iostat -x](img/ud2_iostat-x(wrqm...5.png)
+![Salida de iostat -x](img/ud2_iostat-x_wrqm_sube_anormalmente_5.png)
 
 # [Volver al inicio](../README.md)
