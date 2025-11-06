@@ -19,7 +19,7 @@ Este comando es fundamental para diagnosticar problemas de rendimiento relaciona
 * **buff/cache**: Memoria usada por los búferes del kernel y la caché de página.
 * **available**: Una estimación de cuánta memoria está disponible para iniciar nuevas aplicaciones sin necesidad de swap.
 
-![Salida de free](img/ud2_comandos free2.png)
+![Salida de free](img/ud2_comandos_free2.png)
 
 ---
 
