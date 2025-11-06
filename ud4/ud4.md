@@ -1,5 +1,5 @@
 
-# 📡 Análisis de Comandos de Red, Enumeración y Sockets
+# 📡 Puertos
 
 Este documento detalla comandos esenciales para descubrir dispositivos en la red, escanear puertos e inspeccionar las conexiones de red (sockets).
 
