@@ -17,7 +17,7 @@ Este comando muestra el contenido de la caché ARP.
 * `-a`: Muestra todas las entradas actuales.
 * `-n`: (Numeric) Evita que `arp` intente resolver las direcciones IP a nombres de host (DNS), lo que hace que la salida sea más rápida y limpia.
 
-![Salida de arp -an](img/ud4.arp-an.png)
+![Salida de arp -an](img/ud4.arp-a-n.png)
 
 ---
 
