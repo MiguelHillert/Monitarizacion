@@ -10,7 +10,7 @@ El comando `free` muestra la cantidad total de memoria física (RAM) y de interc
 
 ### `free`
 
-> `free` (a menudo usado con `-m` para megabytes o `-h` para formato legible)
+> `free` (a menudo usado con `-m` para megabytes o `-h` para formato legible u opción -s nº para que haga capturas cada 3 segundos y -c nº para 3 capturas)
 
 Este comando es fundamental para diagnosticar problemas de rendimiento relacionados con la memoria.
 * **total**: Memoria total disponible.
