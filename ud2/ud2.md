@@ -1,4 +1,4 @@
-# 💾 Análisis de Comandos de Sistema y Disco en Linux
+# 💾 Memoria,espacio y rendimiento
 
 Este documento explica varios comandos utilizados para monitorear el estado del sistema, la memoria y el uso del disco en un sistema Linux.
 
