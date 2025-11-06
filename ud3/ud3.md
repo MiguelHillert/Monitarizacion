@@ -1,5 +1,5 @@
 
-# 🌐 Análisis de Comandos de Monitoreo de Red en Linux
+# 🌐 Tráfico de la red
 
 Este documento explora herramientas de línea de comandos para monitorear el tráfico y el ancho de banda de la red en tiempo real.
 
