@@ -1,7 +1,7 @@
 # Monitarizacion
 
 <p align="center">
-  <img src="img_general/monitorizacion.png" alt="Monitarizacion" width="700"/>
+  <img src="img_general/monitorizacion.png" alt="Monitarizacion" width="800"/>
   </p>
   
 ## **[Procesos](ud1/ud1.md)**
