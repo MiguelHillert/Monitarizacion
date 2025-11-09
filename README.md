@@ -1,5 +1,8 @@
 # Monitarizacion
 
+
+![Monitarizacion](img_general/monitorizacion.png)
+
 ## **[Procesos](ud1/ud1.md)**
 ## **[Memoria,espacio y rendimiento](ud2/ud2.md)**
 ## **[Trafico de la red](ud3/ud3.md)**
