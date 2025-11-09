@@ -3,7 +3,7 @@
 ---
 
 <p align="center">
-  <img src="img_general/monitorizacion.png" alt="Monitorización" width="800"/>
+  <img src="img_general/monitorizacion.png" alt="Monitorización" width="800" height="500"/>
 </p>
 
 ---
