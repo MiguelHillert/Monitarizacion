@@ -1,4 +1,4 @@
-# Monitarizacion
+# Monitorizacion
 
 <p align="center">
   <img src="img_general/monitorizacion.png" alt="Monitarizacion" width="800" height="500"/>
